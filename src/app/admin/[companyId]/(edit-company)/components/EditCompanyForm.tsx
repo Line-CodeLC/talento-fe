@@ -52,15 +52,15 @@ export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
   return (
     <>
       <Stepper currentStep={currentStep} length={2} />
-      <div className="mt-10 ">
+      <div className=" ">
         <div className="max-w-5xl mx-auto w-full ">
-          <div className="font-medium text-2xl mb-10 ">
-            Fill in the details to Edit your company
-          </div>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               {currentStep == 1 && (
                 <>
+                  <div className="font-medium text-2xl mb-10 ">
+                    Basic Details
+                  </div>
                   <FormField
                     control={form.control}
                     name="name"
@@ -161,7 +161,9 @@ export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
               )}
               {currentStep == 2 && (
                 <>
-                  <div>Other Details</div>
+                  <div className="font-medium text-2xl mb-10 ">
+                    Other Details
+                  </div>
                   <FormField
                     control={form.control}
                     name="hrAllocated"
@@ -230,7 +232,7 @@ export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
               )}
 
               <div className="flex gap-3">
-                {currentStep < 3 && (
+                {currentStep < 2 && (
                   <Button onClick={() => setCurrentStep((prev) => prev + 1)}>
                     {" "}
                     Next
@@ -243,7 +245,7 @@ export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
                       {" "}
                       Back
                     </Button>
-                    {currentStep == 3 && <Button type="submit">Submit</Button>}
+                    {currentStep == 2 && <Button type="submit">Submit</Button>}
                   </>
                 )}
               </div>

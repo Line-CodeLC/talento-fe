@@ -57,15 +57,15 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
   return (
     <>
       <Stepper currentStep={currentStep} length={3} />
-      <div className="mt-10 ">
+      <div className=" ">
         <div className="max-w-5xl mx-auto w-full ">
-          <div className="font-medium text-2xl mb-10 ">
-            Fill in the details to add a company
-          </div>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               {currentStep == 1 && (
                 <>
+                  <div className="font-medium text-2xl mb-10 ">
+                    Basic Details
+                  </div>
                   <FormField
                     control={form.control}
                     name="name"
@@ -166,6 +166,9 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
               )}
               {currentStep == 2 && (
                 <>
+                  <div className="font-medium text-2xl mb-10 ">
+                    Service Details
+                  </div>
                   <FormField
                     control={form.control}
                     name="service"
@@ -276,16 +279,11 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
               )}
               {currentStep == 3 && (
                 <>
+                  <div className="font-medium text-2xl mb-10 ">Agreement</div>
                   <DocumentUpload dropzone={logoDropzone} fileTypes={[]} />
                 </>
               )}
               <div className="flex gap-3">
-                {currentStep < 3 && (
-                  <Button onClick={() => setCurrentStep((prev) => prev + 1)}>
-                    {" "}
-                    Next
-                  </Button>
-                )}
                 {currentStep > 1 && (
                   <>
                     {" "}
@@ -295,6 +293,12 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     </Button>
                     {currentStep == 3 && <Button type="submit">Submit</Button>}
                   </>
+                )}
+                {currentStep < 3 && (
+                  <Button onClick={() => setCurrentStep((prev) => prev + 1)}>
+                    {" "}
+                    Next
+                  </Button>
                 )}
               </div>
             </form>
