@@ -1,13 +1,18 @@
-import './globals.css';
-import { Jost } from 'next/font/google';
+import ReactQueryProvider from "@/_middlewares/ReactQueryProvider";
+import "./globals.css";
+import { Jost } from "next/font/google";
 
-const jost = Jost({ subsets: ['latin'] });
+const jost = Jost({ subsets: ["latin"] });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={jost.className}>
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   );
