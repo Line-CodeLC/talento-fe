@@ -1,8 +1,8 @@
 import ReactQueryProvider from "@/_middlewares/ReactQueryProvider";
 import "./globals.css";
-import { Jost } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const jost = Jost({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={jost.className}>
+      <body className={inter.className}>
         <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
