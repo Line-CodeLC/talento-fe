@@ -57,8 +57,9 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
   return (
     <>
       <Stepper currentStep={currentStep} length={3} />
+      <div className="flex items-center justify-center min-h-screen">  
       <div className="mt-10 ">
-        <div className="max-w-5xl mx-auto w-full ">
+        <div className=" mx-auto w-full ">
           <div className="font-medium text-2xl mb-10 ">
             Fill in the details to add a company
           </div>
@@ -300,6 +301,7 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
             </form>
           </Form>
         </div>
+      </div>
       </div>
     </>
   );
