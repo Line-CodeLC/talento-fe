@@ -16,7 +16,7 @@ export const AddCompanyModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Add Company</Button>
+        <Button className="bg-[#1065B3] p-6">Add Company</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[725px] max-h-[700px]">
         <DialogHeader>
