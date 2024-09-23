@@ -27,9 +27,11 @@ const Page: FC<PageProps> = () => {
       </div>
 
       <ScrollArea className="max-h-[500px]  rounded-md border p-4 overflow-y-auto">
-        {Array.from({ length: 10 }).map((_, idx) => (
-          <CompanyCard key={idx} />
-        ))}
+        <div className="flex flex-col gap-5">
+          {Array.from({ length: 10 }).map((_, idx) => (
+            <CompanyCard key={idx} />
+          ))}
+        </div>
       </ScrollArea>
     </div>
   );
