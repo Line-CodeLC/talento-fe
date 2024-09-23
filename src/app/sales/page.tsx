@@ -17,7 +17,7 @@ const Page: FC<PageProps> = () => {
         <FilterBox />
       </div>
 
-      <ScrollArea className="max-h-[500px] w-full md:max-w-8xl rounded-md border p-4 overflow-y-auto">
+      <ScrollArea className="max-h-[500px] w-full  md:max-w-8xl rounded-md border p-4 overflow-y-auto">
         {Array.from({ length: 10 }).map((_, idx) => (
           <CompanyCard key={idx} />
         ))}

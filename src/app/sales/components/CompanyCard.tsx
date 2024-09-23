@@ -13,7 +13,7 @@ import { EllipsisVertical } from "lucide-react";
 interface CompanyCardProps {}
 const CompanyCard: FC<CompanyCardProps> = () => {
   return (
-    <div className="bg-white p-3 ml-6 mr-6 ">
+    <div className="bg-white p-3 ml-6 mr-6 mt-3 ">
       <div className="flex justify-between p-3">
         <div className="font-bold text-xl">ABC PVT LTD</div>
         <div className="flex gap-2 items-center">
