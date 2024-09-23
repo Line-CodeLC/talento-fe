@@ -4,28 +4,22 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { EllipsisVertical } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 interface CompanyCardProps {}
 const CompanyCard: FC<CompanyCardProps> = () => {
   return (
-    <div className="bg-white p-3 ml-6 mr-6 mt-3 ">
-      <div className="flex justify-between p-3">
+    <div className="bg-white p-5  ">
+      <div className="flex justify-between ">
         <div className="font-bold text-xl">ABC PVT LTD</div>
         <div className="flex gap-2 items-center">
-          <div className="bg-[#4B5563] p-2 text-sm text-white rounded-3xl">
-            Direct Hire
-          </div>
-          <div className="bg-[#4B5563] p-2 text-sm text-white rounded-3xl">
-            Temporary Hire
-          </div>
-          <div className="bg-[#4B5563] p-2 text-sm text-white rounded-3xl">
-            Part Time Hire
-          </div>
+          <Badge className="p-2">Direct Hire</Badge>
+          <Badge className="p-2"> Temporary Hire</Badge>
+          <Badge className="p-2"> Part Time Hire</Badge>
+
           <DropdownMenu>
             <DropdownMenuTrigger>
               <EllipsisVertical />

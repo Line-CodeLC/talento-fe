@@ -7,7 +7,7 @@ interface SearchBoxProps {}
 const SearchBox: FC<SearchBoxProps> = () => {
   const [email, setEmail] = useState("");
   return (
-    <div className="bg-white m-4 flex w-[80%] items-center relative">
+    <div className="bg-white m-4 flex w-full items-center relative">
       <div className="absolute left-3">
         <Search />
       </div>
