@@ -23,12 +23,12 @@ import {
 
 import { Input } from "@/components/ui/input";
 import { addCompanySchema } from "../schema/schema";
-import Cropper, { ReactCropperElement } from "react-cropper";
-import Stepper from "@/components/ui/stepper";
+import { ReactCropperElement } from "react-cropper";
 import { FC, useState } from "react";
 import { useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import { DocumentUpload } from "@/components/ui/document-upload";
+import { Progress } from "@/components/ui/progress";
 
 interface AddCompanyFormProps {}
 export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
@@ -56,7 +56,7 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
 
   return (
     <>
-      <Stepper currentStep={currentStep} length={3} />
+      <Progress value={(currentStep / 3) * 100} className="mb-4" />
       <div className=" ">
         <div className="max-w-5xl mx-auto w-full ">
           <Form {...form}>
@@ -71,17 +71,17 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-center">
                           <div>
                             <FormLabel>Name</FormLabel>
                             <FormDescription>
-                              Enter your company Name
+                              Enter your company name
                             </FormDescription>
                           </div>
                           <FormControl>
                             <Input
                               placeholder="Name"
-                              className="w-[300px]"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -95,17 +95,17 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-center">
                           <div>
                             <FormLabel>Email</FormLabel>
                             <FormDescription>
-                              Enter your company Email
+                              Enter your company email
                             </FormDescription>
                           </div>
                           <FormControl>
                             <Input
                               placeholder="Email"
-                              className="w-[300px]"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -119,9 +119,9 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="phoneNumber"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-center">
                           <div>
-                            <FormLabel>phone Number</FormLabel>
+                            <FormLabel>Phone Number</FormLabel>
                             <FormDescription>
                               Enter your Company phone Number
                             </FormDescription>
@@ -129,7 +129,7 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                           <FormControl>
                             <Input
                               placeholder="Phone Number"
-                              className="w-[300px]"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -143,17 +143,17 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="address"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-center">
                           <div>
                             <FormLabel>Address</FormLabel>
                             <FormDescription>
-                              Enter your company Name
+                              Enter your company Address
                             </FormDescription>
                           </div>
                           <FormControl>
                             <Input
                               placeholder="Address"
-                              className="w-[300px]"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -166,59 +166,44 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
               )}
               {currentStep == 2 && (
                 <>
-                  <div className="font-medium text-2xl mb-10 ">
-                    Service Details
-                  </div>
-                  <FormField
-                    control={form.control}
-                    name="service"
-                    render={({ field }) => (
-                      <FormItem className="col-span-1">
-                        <FormLabel>Type</FormLabel>
-                        <Select
-                          onValueChange={(e) => {
-                            const equipmentTypesWithDate = [
-                              "truck",
-                              "dump truck",
-                              "super bus",
-                              "bus",
-                            ];
-
-                            field.onChange(e);
-                          }}
-                          value={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select Type" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent defaultValue={field.value}>
-                            <SelectItem value="service 1">service 1</SelectItem>
-                            <SelectItem value="service 2">service 2</SelectItem>
-                            <SelectItem value="Service 3">Service 3</SelectItem>
-
-                            <SelectItem value="Service 4">Service 4</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <div className="font-medium text-2xl mb-10">Service Details</div>
+<FormField
+  control={form.control}
+  name="service"
+  render={({ field }) => (
+    <FormItem className="col-span-1">
+      <FormLabel>Type</FormLabel>
+      <FormControl>
+        <Select onValueChange={(e) => field.onChange(e)} value={field.value}>
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Select Type" />
+          </SelectTrigger>
+          <SelectContent defaultValue={field.value}>
+            <SelectItem value="service 1">Service 1</SelectItem>
+            <SelectItem value="service 2">Service 2</SelectItem>
+            <SelectItem value="service 3">Service 3</SelectItem>
+            <SelectItem value="service 4">Service 4</SelectItem>
+          </SelectContent>
+        </Select>
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
                   <FormField
                     control={form.control}
                     name="payRate"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-start">
                           <div>
                             <FormLabel>Pay Rate</FormLabel>
                             <FormDescription>Enter Pay Rate</FormDescription>
                           </div>
                           <FormControl>
                             <Input
-                              placeholder="pay rate"
-                              className="w-[300px]"
+                              placeholder="Pay rate"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -232,17 +217,15 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="billRate"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-center">
                           <div>
                             <FormLabel>Bill Rate</FormLabel>
-                            <FormDescription>
-                              Enter your bill rate
-                            </FormDescription>
+                            <FormDescription>Enter Bill Rate</FormDescription>
                           </div>
                           <FormControl>
                             <Input
-                              placeholder="Bill Rate"
-                              className="w-[300px]"
+                              placeholder="Bill rate"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -256,17 +239,15 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                     name="commission"
                     render={({ field }) => (
                       <FormItem>
-                        <div className=" justify-between  items-center">
+                        <div className="flex justify-between items-start">
                           <div>
                             <FormLabel>Commission</FormLabel>
-                            <FormDescription>
-                              Enter your Commission
-                            </FormDescription>
+                            <FormDescription>Enter Commission</FormDescription>
                           </div>
                           <FormControl>
                             <Input
-                              placeholder="Address"
-                              className="w-[300px]"
+                              placeholder="Commission"
+                              className="w-[300px] text-start"
                               {...field}
                             />
                           </FormControl>
@@ -283,12 +264,10 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                   <DocumentUpload dropzone={logoDropzone} fileTypes={[]} />
                 </>
               )}
-              <div className="flex gap-3">
+              <div className="flex justify-between">
                 {currentStep > 1 && (
                   <>
-                    {" "}
                     <Button onClick={() => setCurrentStep((prev) => prev - 1)}>
-                      {" "}
                       Back
                     </Button>
                     {currentStep == 3 && <Button type="submit">Submit</Button>}
@@ -296,7 +275,6 @@ export const AddCompanyForm: FC<AddCompanyFormProps> = () => {
                 )}
                 {currentStep < 3 && (
                   <Button onClick={() => setCurrentStep((prev) => prev + 1)}>
-                    {" "}
                     Next
                   </Button>
                 )}
