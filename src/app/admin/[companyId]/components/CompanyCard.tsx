@@ -51,7 +51,7 @@ const CompanyCard: FC<CompanyCardProps> = () => {
           <div className="text-[#4B5563]">HR Allocated</div>
           <div className="font-semibold">Jimmy Kim</div>
         </div>
-        <div className="bg-companyblue p-3 flex gap-2 cursor-pointer text-white items-center w-[220px] rounded-xl">
+        <div className="bg-companyblue p-3 flex gap-2  text-sm cursor-pointer text-white items-center w-[200px] rounded-xl">
           <div>Download Agreement</div>
           <ArrowDownToLine />
         </div>
