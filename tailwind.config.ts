@@ -12,6 +12,7 @@ const config: Config = {
   	extend: {
   		colors: {
 			badge:"#4B5563",
+			companyblue:"#3B82F6",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

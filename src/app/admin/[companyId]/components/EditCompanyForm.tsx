@@ -27,8 +27,7 @@ import Stepper from "@/components/ui/stepper";
 import { FC, useState } from "react";
 
 import { useDropzone } from "react-dropzone";
-
-import { EditCompanySchema } from "../schema/editCompanySchema";
+import { EditCompanySchema } from "../../schema/editCompanySchema";
 
 interface EditCompanyFormProps {}
 export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
