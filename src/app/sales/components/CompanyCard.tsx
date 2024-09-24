@@ -12,13 +12,13 @@ import { Badge } from "@/components/ui/badge";
 interface CompanyCardProps {}
 const CompanyCard: FC<CompanyCardProps> = () => {
   return (
-    <div className="bg-white p-5  ">
+    <div className="bg-white p-5 ">
       <div className="flex justify-between ">
         <div className="font-bold text-xl">ABC PVT LTD</div>
         <div className="flex gap-2 items-center">
-          <Badge className="p-2">Direct Hire</Badge>
-          <Badge className="p-2"> Temporary Hire</Badge>
-          <Badge className="p-2"> Part Time Hire</Badge>
+          <Badge className="p-2 rounded-3xl bg-badge">Direct Hire</Badge>
+          <Badge className="p-2 rounded-3xl bg-badge"> Temporary Hire</Badge>
+          <Badge className="p-2 rounded-3xl bg-badge"> Part Time Hire</Badge>
 
           <DropdownMenu>
             <DropdownMenuTrigger>

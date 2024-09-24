@@ -3,8 +3,8 @@ import { AddCompanyModal } from "./AddCompanyModal";
 interface StatusTabs {}
 const StatusTabs: FC<StatusTabs> = () => {
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex gap-3 pt-8 m-4">
+    <div className="flex justify-between  items-center">
+      <div className="flex gap-6  ">
         <div className="bg-[#202020] rounded-2xl text-white w-[120px] cursor-pointer justify-center flex p-2 items-center gap-2">
           Active
           <div className="bg-white text-red-500 rounded-2xl  text-xs p-2 flex items-center justify-center">
