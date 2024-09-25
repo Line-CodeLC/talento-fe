@@ -1,3 +1,4 @@
+"use client";
 import CustomBadge from "@/components/ui/CustomBadge";
 import { HandCoins, Users } from "lucide-react";
 import {
@@ -7,13 +8,39 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ArrowDownToLine, EllipsisVertical } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import JobTable from "../components/JobTable";
 import SearchBox from "../components/SearchBox";
 import FilterBox from "../components/FilterBox";
-
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { EditCompanyForm } from "../components/EditCompanyForm";
 function page() {
+  const [modalContent, setModalContent] = useState<string | null>(null);
+
+  const handleModalOpen = (content: string) => {
+    setModalContent(content);
+  };
+  const renderModalContent = () => {
+    switch (modalContent) {
+      case "edit":
+        return (
+          <DialogHeader>
+            <DialogTitle className="text-center">Edit</DialogTitle>
+            <EditCompanyForm />
+          </DialogHeader>
+        );
+      case "pause":
+        return <div>Puase</div>;
+    }
+  };
   return (
     <div className="  m-6 mt-">
       <div className="bg-white p-5">
@@ -27,8 +54,12 @@ function page() {
               <EllipsisVertical />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>Edit information</DropdownMenuItem>
-              <DropdownMenuItem>Pause</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleModalOpen("edit")}>
+                Edit information
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleModalOpen("pause")}>
+                Pause
+              </DropdownMenuItem>
               <DropdownMenuItem>Change HR</DropdownMenuItem>
               <DropdownMenuItem>Delete</DropdownMenuItem>
             </DropdownMenuContent>
@@ -139,6 +170,16 @@ function page() {
           </div>
         </div>
       </div>
+      {modalContent && (
+        <Dialog
+          open={!!modalContent}
+          onOpenChange={(open) => !open && setModalContent(null)}
+        >
+          <DialogContent className="sm:max-w-[725px] max-h-[700px]">
+            {renderModalContent()}
+          </DialogContent>
+        </Dialog>
+      )}
     </div>
   );
 }

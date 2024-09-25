@@ -38,7 +38,7 @@ export const EditCompanyForm: FC<EditCompanyFormProps> = () => {
     defaultValues: {
       name: "",
       email: "",
-      phoneNumber: 0,
+      phoneNumber: "",
       address: "",
       hrAllocated: "",
       salesPersonAllocated: "",
