@@ -13,6 +13,7 @@ const config: Config = {
   		colors: {
 			badge:"#4B5563",
 			companyblue:"#3B82F6",
+			textgray:"#4B5563",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

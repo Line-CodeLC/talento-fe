@@ -15,7 +15,7 @@ import FilterBox from "../components/FilterBox";
 
 function page() {
   return (
-    <div className="h-screen  m-6 mt-">
+    <div className="  m-6 mt-">
       <div className="bg-white p-5">
         <div className="flex justify-between items-center  ">
           <div className="flex items-center gap-4">
@@ -93,6 +93,51 @@ function page() {
       </div>
       <div className="bg-white p-3">
         <JobTable />
+      </div>
+      <div className=" bg-white p-5 mt-5 mb-5">
+        <div className="flex justify-between mb-5">
+          <div className="text-2xl font-semibold">Agreement Details</div>
+          <div className="flex gap-5 items-center">
+            <div className="border border-gray-300 p-3 rounded-xl cursor-pointer">
+              Start New Agreement
+            </div>
+            <div className="bg-companyblue p-3 flex gap-2  text-sm cursor-pointer text-white items-center w-[200px] rounded-xl">
+              <div>Download Agreement</div>
+              <ArrowDownToLine />
+            </div>
+          </div>
+        </div>
+        <Separator className="mt-2 mb-4" />
+        <div className="flex flex-col gap-10">
+          <div className="grid grid-cols-3 gap-5">
+            <div>
+              <div className="text-textgray"> Job Type</div>
+              <div className="font-semibold">Direct Hire</div>
+            </div>
+            <div>
+              <div className="text-textgray">Pay Rate</div>
+              <div className="font-semibold">Direct Hire</div>
+            </div>
+            <div>
+              <div className="text-textgray">Bill Rate</div>
+              <div className="font-semibold">$10/Hour</div>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-5">
+            <div>
+              <div className="text-textgray"> Job Type</div>
+              <div className="font-semibold">Direct Hire</div>
+            </div>
+            <div>
+              <div className="text-textgray">Pay Rate</div>
+              <div className="font-semibold">Direct Hire</div>
+            </div>
+            <div>
+              <div className="text-textgray">Bill Rate</div>
+              <div className="font-semibold">$10/Hour</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

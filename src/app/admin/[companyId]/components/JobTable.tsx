@@ -8,6 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 import React from "react";
 
@@ -31,7 +32,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>{" "}
         <TableRow>
@@ -40,7 +43,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
         <TableRow>
@@ -49,7 +54,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
         <TableRow>
@@ -58,7 +65,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
         <TableRow>
@@ -67,7 +76,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
         <TableRow>
@@ -76,7 +87,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
         <TableRow>
@@ -85,7 +98,9 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <ExternalLink />
+            <Link href="/admin/1/company/job-details">
+              <ExternalLink />
+            </Link>
           </TableCell>
         </TableRow>
       </TableBody>
