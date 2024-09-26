@@ -19,6 +19,9 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ChangeHrForm } from "./ChangeHrForm";
+import UnpauseForm from "./UnpauseForm";
+import PauseForm from "./PauseForm";
+import DeleteCompany from "./DeleteCompany";
 
 interface CompanyCardProps {}
 
@@ -44,8 +47,7 @@ const CompanyCard: FC<CompanyCardProps> = () => {
       case "Pause":
         return (
           <div>
-            <p>Are you sure you want to pause the company operations?</p>
-            <Button variant="outline">Confirm Pause</Button>
+            <PauseForm />
           </div>
         );
       case "Change HR":
@@ -60,8 +62,7 @@ const CompanyCard: FC<CompanyCardProps> = () => {
       case "Delete":
         return (
           <div>
-            <p>Are you sure you want to delete this company?</p>
-            <Button variant="destructive">Delete</Button>
+            <DeleteCompany />
           </div>
         );
       default:

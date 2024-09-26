@@ -22,6 +22,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { EditCompanyForm } from "../components/EditCompanyForm";
+import PauseForm from "../components/PauseForm";
+import { ChangeHrForm } from "../components/ChangeHrForm";
 function page() {
   const [modalContent, setModalContent] = useState<string | null>(null);
 
@@ -33,12 +35,17 @@ function page() {
       case "edit":
         return (
           <DialogHeader>
-            <DialogTitle className="text-center">Edit</DialogTitle>
             <EditCompanyForm />
           </DialogHeader>
         );
       case "pause":
-        return <div>Puase</div>;
+        return (
+          <DialogHeader>
+            <PauseForm />
+          </DialogHeader>
+        );
+      case "hr":
+        return <ChangeHrForm />;
     }
   };
   return (
@@ -60,8 +67,12 @@ function page() {
               <DropdownMenuItem onClick={() => handleModalOpen("pause")}>
                 Pause
               </DropdownMenuItem>
-              <DropdownMenuItem>Change HR</DropdownMenuItem>
-              <DropdownMenuItem>Delete</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleModalOpen("hr")}>
+                Change HR
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleModalOpen("pause")}>
+                Delete
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
