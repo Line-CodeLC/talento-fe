@@ -27,3 +27,13 @@ export const addCompanySchema = z.object({
 
   agreement: z.string().min(1, { message: "Agreement is required." }),
 });
+export const SettingSchema = z.object({
+  name:z.string(),
+  email:z.string(),
+  phoneNumber:z.string(),
+})
+export const PasswordSchema = z.object({
+  currentPassword:z.string(),
+  newPassword:z.string(),
+  confirmnewPassword:z.string()
+})

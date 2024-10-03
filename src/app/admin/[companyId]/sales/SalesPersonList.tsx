@@ -9,7 +9,7 @@ function SalesPersonList() {
       <div className="m-4">
         <div className="flex justify-between">
           <div className="font-semibold text-2xl">SalesPerson List</div>
-          <div className="bg-companyblue rounded-lg text-sm text-white p-2 flex items-center">
+          <div className="bg-companyblue cursor-pointer rounded-lg text-sm text-white p-2 flex items-center">
             Add New Salesperson
           </div>
         </div>

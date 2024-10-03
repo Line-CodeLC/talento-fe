@@ -11,7 +11,7 @@ function Hr() {
       <div className="m-4">
         <div className="flex justify-between">
           <div className="font-semibold text-2xl">HR List</div>
-          <div className="bg-companyblue rounded-lg text-sm text-white p-2 flex items-center">
+          <div className="bg-companyblue cursor-pointer rounded-lg text-sm text-white p-2 flex items-center">
             Add a New HR
           </div>
         </div>
