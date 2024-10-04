@@ -8,7 +8,7 @@ function layout({ children }: { children: any }) {
       <SideBar />
       <div className="col-span-4 p-2">
         <Navbar />
-        <div className="bg-[#F3F4F6] mt-2">{children}</div>
+        <div className="bg-[#F3F4F6] pt-3">{children}</div>
       </div>
     </div>
   );

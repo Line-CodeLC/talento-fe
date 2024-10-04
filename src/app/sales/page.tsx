@@ -1,10 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 
-import Sales from "./Sales";
+function page() {
+  return <div>Click o</div>;
+}
 
-interface PageProps {}
-const Page: FC<PageProps> = () => {
-  return <Sales />;
-};
-
-export default Page;
+export default page;

@@ -10,9 +10,7 @@ import {
 import { ArrowDownToLine, EllipsisVertical } from "lucide-react";
 import React, { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import JobTable from "../components/JobTable";
-import SearchBox from "../components/SearchBox";
-import FilterBox from "../components/FilterBox";
+
 import {
   Dialog,
   DialogContent,
@@ -20,11 +18,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { EditCompanyForm } from "../components/EditCompanyForm";
-import PauseForm from "../components/PauseForm";
-import { ChangeHrForm } from "../components/ChangeHrForm";
-import DeleteCompany from "../components/DeleteCompany";
+import { EditCompanyForm } from "@/app/admin/[companyId]/components/EditCompanyForm";
+import PauseForm from "@/app/admin/[companyId]/components/PauseForm";
+import { ChangeHrForm } from "@/app/admin/[companyId]/components/ChangeHrForm";
+import DeleteCompany from "@/app/admin/[companyId]/components/DeleteCompany";
+import SearchBox from "../../components/SearchBox";
+import FilterBox from "../../components/FilterBox";
+import JobTable from "@/app/admin/[companyId]/components/JobTable";
+
 function page() {
   const [modalContent, setModalContent] = useState<string | null>(null);
 

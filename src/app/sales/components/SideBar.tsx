@@ -11,18 +11,20 @@ const SideBar: FC<SideBarProps> = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => pathname.includes(path);
 
   return (
     <div className="p-5 col-span-1 flex flex-col ml-5 gap-7">
       <div>
-        <Image src={lc_logo} className="w-32 mt-10" alt="Logo" />
+        <Image src={lc_logo} className="w-48 mt-5" alt="Logo" />
       </div>
 
       <div
-        onClick={() => router.push("/sales")}
+        onClick={() => router.push("/sales/company")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
-          isActive("/sales") ? "bg-[#E84B01] text-white" : "text-black"
+          isActive("/sales/company")
+            ? "bg-companyblue text-white"
+            : "text-black"
         }`}
       >
         <Building2 />
@@ -32,7 +34,7 @@ const SideBar: FC<SideBarProps> = () => {
       <div
         onClick={() => router.push("/sales/target")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
-          isActive("/sales/target") ? "bg-[#E84B01] text-white" : "text-black"
+          isActive("/sales/target") ? "bg-companyblue text-white" : "text-black"
         }`}
       >
         <Target />
@@ -43,7 +45,7 @@ const SideBar: FC<SideBarProps> = () => {
         onClick={() => router.push("/sales/commission")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("/sales/commission")
-            ? "bg-[#E84B01] text-white"
+            ? "bg-companyblue text-white"
             : "text-black"
         }`}
       >
@@ -54,7 +56,9 @@ const SideBar: FC<SideBarProps> = () => {
       <div
         onClick={() => router.push("/sales/settings")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
-          isActive("/sales/settings") ? "bg-[#E84B01] text-white" : "text-black"
+          isActive("/sales/settings")
+            ? "bg-companyblue text-white"
+            : "text-black"
         }`}
       >
         <Settings />

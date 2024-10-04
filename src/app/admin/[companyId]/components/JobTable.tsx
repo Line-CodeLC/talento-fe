@@ -32,7 +32,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -43,7 +43,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -54,7 +54,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -65,7 +65,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -76,7 +76,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -87,7 +87,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
@@ -98,7 +98,7 @@ function JobTable() {
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>
           <TableCell className="">
-            <Link href="/admin/1/company/job-details">
+            <Link href="/sales/company/1/job-details">
               <ExternalLink />
             </Link>
           </TableCell>
