@@ -1,8 +1,7 @@
 import React from "react";
-import { Commission } from "./Commission";
 
 function page() {
-  return <Commission />;
+  return <div>Select</div>;
 }
 
 export default page;

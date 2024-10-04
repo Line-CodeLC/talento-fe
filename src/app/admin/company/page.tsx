@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Company from "../../Company";
+import Company from "../Company";
 
 interface PageProps {}
 const Page: FC<PageProps> = () => {

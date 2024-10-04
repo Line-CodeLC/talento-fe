@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import React from "react";
-import SearchBox from "../../components/SearchBox";
-import FilterBox from "../../components/FilterBox";
+import SearchBox from "../../../components/SearchBox";
+import FilterBox from "../../../components/FilterBox";
 import EmployeeListTable from "./components/EmployeeListTable";
 
 function page() {

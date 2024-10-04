@@ -51,4 +51,3 @@ function TargetTable() {
 }
 
 export default TargetTable;
-TableRow;

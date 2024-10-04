@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "@/components/ui/Navbar";
-import SideBar from "./[companyId]/components/SideBar";
+import SideBar from "./components/SideBar";
 
 function layout({ children }: { children: any }) {
   return (

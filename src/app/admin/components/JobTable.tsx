@@ -14,11 +14,13 @@ import React from "react";
 
 function JobTable() {
   return (
-    <Table>
+    <Table className="bg-white ">
       <TableCaption>A list of your Jobs</TableCaption>
       <TableHeader className="bg-[#D1D5DB] ">
         <TableRow className="text-[#202020]">
-          <TableHead className="w-[250px] text-[#202020]">Job Name</TableHead>
+          <TableHead className="w-[250px] text-[#202020] p-3">
+            Job Name
+          </TableHead>
           <TableHead className="text-[#202020]">Job Type</TableHead>
           <TableHead className="text-[#202020]">Employee Working</TableHead>
           <TableHead className="text-[#202020]">Start Date</TableHead>
@@ -27,7 +29,7 @@ function JobTable() {
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableCell className="font-medium">Driver</TableCell>
+          <TableCell className="font-medium  p-3">Driver</TableCell>
           <TableCell>Direct Hire</TableCell>
           <TableCell>25</TableCell>
           <TableCell className="">23-01-2023</TableCell>

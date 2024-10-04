@@ -2,10 +2,10 @@
 import React from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import SearchBox from "./[companyId]/components/SearchBox";
-import FilterBox from "./[companyId]/components/FilterBox";
-import CompanyCard from "./[companyId]/components/CompanyCard";
-import StatusTabs from "./[companyId]/components/StatusTabs";
+import StatusTabs from "./components/StatusTabs";
+import SearchBox from "./components/SearchBox";
+import FilterBox from "./components/FilterBox";
+import CompanyCard from "./components/CompanyCard";
 
 function Company() {
   return (

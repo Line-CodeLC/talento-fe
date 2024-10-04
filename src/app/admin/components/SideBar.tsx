@@ -26,7 +26,7 @@ const SideBar: FC<SideBarProps> = () => {
         <Image src={lc_logo} className="w-48 mt-5" alt="Logo" />
       </div>
       <div
-        onClick={() => router.push("/admin/1/overview")}
+        onClick={() => router.push("/admin/overview")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("overview") ? "bg-companyblue text-white" : "text-black"
         }`}
@@ -35,7 +35,7 @@ const SideBar: FC<SideBarProps> = () => {
         Overview
       </div>
       <div
-        onClick={() => router.push("/admin/1/company")}
+        onClick={() => router.push("/admin/company")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("company") ? "bg-companyblue text-white" : "text-black"
         }`}
@@ -45,7 +45,7 @@ const SideBar: FC<SideBarProps> = () => {
       </div>
 
       <div
-        onClick={() => router.push("/admin/1/sales")}
+        onClick={() => router.push("/admin/sales")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("sales") ? "bg-companyblue text-white" : "text-black"
         }`}
@@ -55,7 +55,7 @@ const SideBar: FC<SideBarProps> = () => {
       </div>
 
       <div
-        onClick={() => router.push("/admin/1/hr")}
+        onClick={() => router.push("/admin/hr")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("hr") ? "bg-companyblue text-white" : "text-black"
         }`}
@@ -65,7 +65,7 @@ const SideBar: FC<SideBarProps> = () => {
       </div>
 
       <div
-        onClick={() => router.push("/admin/1/settings")}
+        onClick={() => router.push("/admin/settings")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("settings") ? "bg-companyblue text-white" : "text-black"
         }`}
