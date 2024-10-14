@@ -50,7 +50,7 @@ const SideBar: FC<SideBarProps> = () => {
       </div>
 
       <div
-        onClick={() => router.push("/chat/meetings")}
+        onClick={() => router.push("/employee/meetings")}
         className={`flex gap-3 rounded-lg p-3 cursor-pointer ${
           isActive("meetings") ? "bg-companyblue text-white" : "text-black"
         }`}

@@ -41,7 +41,7 @@ function page() {
     console.log(values);
   }
   return (
-    <div className="h-screen">
+    <div className="h-full mb-5 mt-5 pb-5">
       <div className="bg-white m-5 p-5 ">
         <div className="text-2xl font-semibold">Profile Picture</div>
         <div className="flex gap-5 items-center p-5">

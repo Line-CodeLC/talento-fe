@@ -12,6 +12,7 @@ import {
   ChartAreaIcon,
   MessageCircle,
   MessageCircleCode,
+  MessageCircleQuestion,
   PanelsTopLeft,
   Settings,
   Users,
@@ -74,7 +75,7 @@ const SideBar: FC<SideBarProps> = () => {
           isActive("feedback") ? "bg-companyblue text-white" : "text-black"
         }`}
       >
-        <Settings />
+        <MessageCircleQuestion />
         FeedBack
       </div>
       <div
